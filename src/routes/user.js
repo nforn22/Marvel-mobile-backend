@@ -10,7 +10,7 @@ router.post("/signup", async (req, res) => {
   try {
     const { email, username, password } = req.body;
 
-    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         return res.status(400).json({
           status: "error",
